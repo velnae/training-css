@@ -1,3 +1,14 @@
+/* --- configuraciones gobales --- */
+h1,
+h2,
+p {
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
 body {
     margin: 0;
     background-color: white;
@@ -27,7 +38,6 @@ body {
     /* background-color: blue; */
     display: flex;
     align-items: center;
-    text-decoration: none;
 }
 
 .navbar .logo-img {
@@ -54,7 +64,6 @@ body {
 }
 
 .navbar .menu ul li a {
-    text-decoration: none;
     color: white;
 }
 
@@ -204,12 +213,6 @@ body {
 }
 
 #servicios .container>h1 {
-    font-size: 2.50rem;
-    line-height: 2.5rem;
-    font-family: 'Scheherazade New', sans-serif;
-    font-weight: 200;
-    color: #36404F;
-    text-align: center;
     margin-bottom: 3rem;
 }
 
@@ -219,9 +222,10 @@ body {
     justify-content: center;
     align-items: center;
     gap: 2.5rem;
+    padding-bottom: 2.5rem;
 }
 
-#servicios .container .servicios-items .item{
+#servicios .container .servicios-items .item {
     background-color: #06318e;
     display: flex;
     margin-bottom: 15px;
@@ -251,7 +255,7 @@ body {
     filter: blur(5px);
 }
 
-#servicios .container .servicios-items .item .icon{
+#servicios .container .servicios-items .item .icon {
     position: relative;
     padding-top: 15px;
     width: 140px;
@@ -300,26 +304,27 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    row-gap: .5rem;
     box-sizing: border-box;
     border-width: 0;
     border-style: solid;
     border-color: #e5e7eb;
 }
 
-#servicios .container .servicios-items .item .content .content-text{
+#servicios .container .servicios-items .item .content .content-text {
     height: 19rem;
     font-family: 'SF Mono', sans-serif;
     color: #fff;
 }
 
-#servicios .container .servicios-items .item .content .content-text h2{
+#servicios .container .servicios-items .item .content .content-text h2 {
     font-size: 1.8em;
     line-height: 2.9rem;
     margin: 0;
     font-weight: 400;
 }
-#servicios .container .servicios-items .item .content .content-text p{
+
+#servicios .container .servicios-items .item .content .content-text p {
     text-align: justify;
     font-family: sans-serif;
     font-size: 1rem;
@@ -329,13 +334,164 @@ body {
     /* font-weight: 400; */
 }
 
-#servicios .container .servicios-items .item img{
+#servicios .container .servicios-items .item .content .content-button .btn-service {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    background: rgb(147, 51, 234);
+    background: linear-gradient(160deg, rgba(147, 51, 234, 1) 0%, rgba(59, 130, 246, 1) 100%);
+    font-size: 0.875rem;
+    color: #fff;
+}
+
+#servicios .container .servicios-items .item img {
     width: 5rem;
     height: 4rem;
 }
 
 /* --- section servicios - end --- */
 
+
+/* --- section clientes - start --- */
+#clientes {
+    padding: 3rem 0;
+}
+
+#clientes .container {
+    padding: 2rem 1.5rem;
+    width: 70rem;
+    margin: 0 auto;
+}
+
+#clientes .container h1 {
+    margin-bottom: 3rem;
+}
+
+#clientes .container .clientes-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5rem 5rem;
+}
+
+#clientes .container .clientes-items .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#clientes .container .clientes-items .item img {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 9999px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+#clientes .container .clientes-items .item span {
+    max-width: 8rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-family: sans-serif;
+    color: #6B7280;
+}
+
+/* --- section clientes - end --- */
+
+
+/* --- section contacto - start --- */
+#contacto {
+    padding-top: 10rem;
+}
+
+#contacto .container {
+    padding: 2rem 1.5rem;
+    width: 70rem;
+    margin: 0 auto;
+}
+
+#contacto .container .titles {
+    text-align: center;
+    /* margin-bottom: 3rem; */
+}
+
+#contacto .container .contacto-items {
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    column-gap: 3.5rem;
+}
+
+#contacto .container .contacto-items .card {
+    padding: 1.75rem 1.25rem;
+    background-color: #F9FAFB;
+    width: 20rem;
+    height: 20rem;
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+    color: #69707E;
+    box-shadow: 0px 10px 40px 0px rgba(166, 166, 166, 0.75);
+}
+
+
+#contacto .container .contacto-items .card>h1 {
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+#contacto .container .contacto-items .card>hr {
+    border-top: 2px solid;
+}
+
+#contacto .container .contacto-items .card .card-content {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1.5rem;
+}
+
+#contacto .container .contacto-items .card .card-content .content-data {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+#contacto .container .contacto-items .card .card-content .content-data span{
+    font-size: 1rem;
+    line-height: 1.75rem;
+    font-family: sans-serif;
+}
+
+#contacto .container .contacto-items .card  .card-content .content-data img {
+    height: 1.5rem;
+}
+
+#contacto .container .contacto-items .map iframe {
+    box-shadow: 0px 10px 40px 0px rgba(166, 166, 166, 0.75);
+}
+
+/* --- section contacto - end --- */
+
+
+/* --- footer - start --- */
+footer {
+    padding: 1.5rem;
+    background-color: #1F2937;
+    display: flex;
+    box-sizing: border-box;
+}
+
+/* --- footer - end --- */
 
 
 /* helpers */
@@ -345,4 +501,16 @@ body {
 
 .font-color-yellow {
     color: #EAB308;
+}
+
+.title-font {
+    font-family: 'Scheherazade New', sans-serif;
+    font-weight: 200;
+    color: #36404F;
+}
+
+.title-section {
+    font-size: 2.50rem;
+    line-height: 2.5rem;
+    text-align: center;
 }
