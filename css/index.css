@@ -4,7 +4,8 @@ h2,
 p {
     margin: 0;
 }
-a{
+
+a {
     text-decoration: none;
     color: inherit;
 }
@@ -79,6 +80,7 @@ body {
 /* --- section inicio - start --- */
 #inicio {
     padding-top: 2.25rem;
+    overflow: hidden;
 }
 
 #inicio .container {
@@ -201,6 +203,65 @@ body {
 /* --- section inicio - waves - end --- */
 
 
+/* --- section inicio - bubbles - end --- */
+#background-wrap {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 5;
+    opacity: 0.7;
+}
+
+.bubble {
+    border-radius: 50%;
+    box-shadow: 0 20px 30px rgb(0 0 0 / 0.2), inset 0px 10px 30px 5px rgb(237, 237, 237);
+    height: 150px;
+    width: 150px;
+    opacity: 0;
+    position: absolute;
+}
+
+.bubble:after {
+    /* display: none; */
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    /* box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3); */
+    content: "";
+    height: 130px;
+    left: -10px;
+    position: absolute;
+    width: 180px;
+}
+
+
+@keyframes animateBubble {
+    0% {
+        margin-top: -150px;
+    }
+    1% {
+        opacity: 1;
+    }
+    100% {
+        margin-top: -100%;
+        transform: scale(2);
+    }
+}
+
+@keyframes sideWays {
+    0% {
+        margin-left: -50px;
+    }
+
+    100% {
+        margin-left: 50px;
+    }
+}
+
+/* --- section inicio - bubbles - end --- */
+
+
 /* --- section servicios - start --- */
 #servicios {
     padding-top: 3.75rem;
@@ -252,7 +313,6 @@ body {
     height: 120%;
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2));
     transform: rotate(35deg);
-    pointer-events: none;
     filter: blur(5px);
 }
 
@@ -467,13 +527,13 @@ body {
     column-gap: .5rem;
 }
 
-#contacto .container .contacto-items .card .card-content .content-data span{
+#contacto .container .contacto-items .card .card-content .content-data span {
     font-size: 1rem;
     line-height: 1.75rem;
     font-family: sans-serif;
 }
 
-#contacto .container .contacto-items .card  .card-content .content-data img {
+#contacto .container .contacto-items .card .card-content .content-data img {
     height: 1.5rem;
 }
 
@@ -493,7 +553,8 @@ footer {
     color: #b2b2b2;
     text-align: center;
 }
-footer p{
+
+footer p {
     width: 100%;
 }
 
@@ -519,4 +580,85 @@ footer p{
     font-size: 2.50rem;
     line-height: 2.5rem;
     text-align: center;
+}
+
+
+.x1 {
+    animation: animateBubble 10s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    animation-delay: 3s;
+    left: -5%;
+    top: 5%;
+    transform: scale(0.15);
+}
+
+.x2 {
+    animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    animation-delay: 7s;
+    left: 5%;
+    top: 80%;
+    transform: scale(0.2);
+}
+
+.x3 {
+    animation: animateBubble 19s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    animation-delay: 1s;
+    left: 10%;
+    top: 40%;
+    transform: scale(0.1);
+}
+
+.x4 {
+    animation: animateBubble 17s linear infinite, sideWays 3s ease-in-out infinite alternate;
+    animation-delay: 2s;
+    left: 20%;
+    top: 0;
+    transform: scale(0.05);
+}
+
+.x5 {
+    animation: animateBubble 18s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    animation-delay: 4s;
+    left: 30%;
+    top: 50%;
+    transform: scale(0.15);
+}
+
+.x6 {
+    animation: animateBubble 16s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    animation-delay: 5s;
+    left: 50%;
+    top: 0;
+    transform: scale(0.1);
+}
+
+.x7 {
+    animation: animateBubble 10s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    animation-delay: 7s;
+    left: 65%;
+    top: 70%;
+    transform: scale(0.2);
+}
+
+.x8 {
+    animation: animateBubble 15s linear infinite, sideWays 3s ease-in-out infinite alternate;
+    animation-delay: 5s;
+    left: 80%;
+    top: 10%;
+    transform: scale(0.15);
+}
+
+.x9 {
+    animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    animation-delay: 4s;
+    left: 90%;
+    top: 50%;
+    transform: scale(0.05);
+}
+
+.x10 {
+    animation: animateBubble 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    animation-delay: 5s;
+    left: 80%;
+    top: 80%;
+    transform: scale(0.2);
 }
