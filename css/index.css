@@ -489,6 +489,11 @@ footer {
     background-color: #1F2937;
     display: flex;
     box-sizing: border-box;
+    color: #b2b2b2;
+    text-align: center;
+}
+footer p{
+    width: 100%;
 }
 
 /* --- footer - end --- */
