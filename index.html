@@ -25,17 +25,17 @@
                     </a>
                     <div class="menu">
                         <ul>
-                            <li>
-                                <a href="#">Inicio</a>
+                            <li class="inicio active">
+                                <a href="#inicio">Inicio</a>
                             </li>
-                            <li>
-                                <a href="#">Servicios</a>
+                            <li class="servicios">
+                                <a href="#servicios">Servicios</a>
                             </li>
-                            <li>
-                                <a href="#">Clientes</a>
+                            <li class="clientes">
+                                <a href="#clientes">Clientes</a>
                             </li>
-                            <li>
-                                <a href="#">Contáctanos</a>
+                            <li class="contacto">
+                                <a href="#contacto">Contáctanos</a>
                             </li>
                         </ul>
                     </div>
@@ -60,10 +60,8 @@
                                     </span>
                                 </a>
                             </div>
-                            <div>
-                                <span>
-                                    👈
-                                </span>
+                            <div class="icon-container">
+                                <span class="icon-hand">👈</span>
                             </div>
                         </div>
                     </div>
@@ -360,6 +358,30 @@
 </body>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
+    const sections = document.querySelectorAll("section");
+    const navLi = document.querySelectorAll("nav .container ul li");
+    window.onscroll = () => {
+        var current = "";
+
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            if (pageYOffset >= sectionTop - 100) {
+                current = section.getAttribute("id");
+                // console.log(current);
+            }
+        });
+
+        navLi.forEach((li) => {
+            li.classList.remove("active");
+            // console.log(li);
+            console.log(li.classList);
+            if (li.classList.contains(current)) {
+                // console.log('aqui');
+                li.classList.add("active");
+            }
+        });
+    };
+
     AOS.init({
         duration: 1000, // values from 0 to 3000, with step 50ms
     });

@@ -19,7 +19,7 @@ body {
 /* --- navbar start --- */
 .navbar {
     margin: 0;
-    padding: 0.7rem 3rem;
+    padding: 0.8rem 3rem;
     background: rgb(16, 23, 43);
     border-bottom: 1px solid #374151;
     position: sticky;
@@ -47,12 +47,10 @@ body {
 }
 
 .navbar .menu {
-    /* background-color: red; */
     width: auto;
 }
 
 .navbar .menu ul {
-    /* background-color: green; */
     display: flex;
     flex-direction: row;
     justify-content: baseline;
@@ -60,18 +58,23 @@ body {
 }
 
 .navbar .menu ul li {
-    /* background-color: aliceblue; */
-    padding-left: 2rem;
+    padding-left: 2.15rem;
     list-style: none;
 }
 
 .navbar .menu ul li a {
     color: white;
+    font-size: 1rem;
+    font-family: sans-serif;
 }
 
-.navbar .menu ul li:nth-child(1) a {
+.navbar .menu ul li.active a {
     color: #67E8F9;
 }
+
+/* .navbar .menu ul li:nth-child(1) a {
+    color: #67E8F9;
+} */
 
 /* --- navbar end --- */
 
@@ -135,11 +138,38 @@ body {
 
 #inicio .container .container-button a span {
     border-radius: .5rem;
-    padding: 0.5rem 2.5rem;
-    border: 3px solid purple;
+    padding: 0.7rem 2.3rem;
+    border: 2px solid rgb(159, 35, 97);
     color: white;
     background-color: black;
+    font-family: sans-serif;
 }
+
+#inicio .container .container-button a span:hover {
+    background: rgb(168, 85, 247);
+    background: linear-gradient(145deg, rgba(168, 85, 247, 1) 0%, rgba(236, 72, 153, 1) 100%);
+}
+
+
+#inicio .container .container-button div.icon-container{
+    animation: hand-move 2s ease-in-out infinite;
+    margin-top: -.5rem;
+}
+
+#inicio .container .container-button span.icon-hand{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+@keyframes hand-move{
+    0%,100% {
+      transform: translateX(10px);
+    }
+  
+    50% {
+      transform: translateX(-10px);
+    }
+  }
 
 #inicio .container .image-person-computer {
     display: flex;
@@ -240,9 +270,11 @@ body {
     0% {
         margin-top: -150px;
     }
+
     1% {
         opacity: 1;
     }
+
     100% {
         margin-top: -100%;
         transform: scale(2);
